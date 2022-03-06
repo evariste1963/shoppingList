@@ -1,0 +1,17 @@
+* {
+  margin-left: 100px;
+}
+
+body {
+  margin-top: 100px;
+  background: #587a57;
+  font-size: 50px;
+}
+
+form input, button{
+  font-size: 2rem;
+  height:5rem;
+}
+.done {
+  text-decoration: line-through;
+}
