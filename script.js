@@ -21,8 +21,6 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-console.log("hi");
-
 li.addEventListener("click", function () {});
 
 //function createListItem(){
