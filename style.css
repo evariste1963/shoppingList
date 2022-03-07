@@ -5,7 +5,7 @@
 
 body {
   background: orangered;
-  font-family: cursive, Arial, Helvetica, sans-serif;
+  font-family: cursive, sans-serif;
 }
 
 .container {
@@ -34,6 +34,7 @@ body {
 }
 
 .shopping input {
+  padding-left: 1rem;
   font-family: inherit;
   outline: 0;
   border: 0;
