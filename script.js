@@ -21,26 +21,23 @@ form.addEventListener("submit", function (e) {
   }
 });
 
-connsole.log('hello!')
+console.log("hi");
 
-li.addEventListener('click', function(){
+li.addEventListener("click", function () {});
 
-})
-  
 //function createListItem(){
-  // Create li element, style it and append it to ul
-  // Create delete button, style it and append it to li
-  // Hide empty list text if li's exist
-  // Toggle line-through on click
-  // Delete item
-  //}
+// Create li element, style it and append it to ul
+// Create delete button, style it and append it to li
+// Hide empty list text if li's exist
+// Toggle line-through on click
+// Delete item
+//}
 
 //1. 1. If you click on the list item, it toggles the .done  class on and off.
 
 //2. Add buttons next to each list item to delete the item when clicked on its corresponding delete button.
 
 //3. BONUS: When adding a new list item, it automatically adds the delete button next to it (hint: be sure to check if new items are clickable too!)
-
 
 /*
 function createListItem() {
