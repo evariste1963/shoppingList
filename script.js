@@ -8,10 +8,16 @@ function inputLength() {
 }
 
 function createListElement() {
-  var li = document.createElement("li");
+  const li = document.createElement("li");
   li.appendChild(document.createTextNode(input.value));
   ul.appendChild(li);
   input.value = "";
+
+  const delBtn = document.createElement("button");
+  const xBtn = document.createElement("i");
+  xBtn.classList.add("fas", "fa-times");
+  delBtn.appendChild(xBtn);
+  li.append(delBtn);
 }
 
 form.addEventListener("submit", function (e) {
