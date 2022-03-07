@@ -10,14 +10,20 @@ function inputLength() {
 function createListElement() {
   const li = document.createElement("li");
   li.appendChild(document.createTextNode(input.value));
+  li.addEventListener("click", toggleDone);
   ul.appendChild(li);
   input.value = "";
 
   const delBtn = document.createElement("button");
   const xBtn = document.createElement("i");
+  delBtn.classList.add("cust_delete");
   xBtn.classList.add("fa", "fa-times");
   delBtn.appendChild(xBtn);
   li.append(delBtn);
+
+  function toggleDone() {
+    li.classList.toggle("done");
+  }
 }
 
 form.addEventListener("submit", function (e) {
