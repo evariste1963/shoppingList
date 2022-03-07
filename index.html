@@ -2,20 +2,27 @@
 <html>
   <head>
     <title>Javascript + DOM</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" href="style.css" />
-    
   </head>
   <body>
-    <h1>Shopping List</h1>
-    <p id="first">Get it done today</p>
-    <form action="submit">
-      <input id="userinput" type="text" placeholder="enter items" />
-      <button id="enter">Enter</button>
-    </form>
-    <ul>
-      
+    <div class="container">
+      <div class="shopping">
+        <h1 style="text-align: center">Shopping List</h1>
+        <br />
+        <div style="text-align: center">
+          <i id="pencil" class="fas fa-pencil-alt"></i
+          ><input id="userInput" type="text" />
+        </div>
+        <br />
+        <div id="allItems"></div>
+      </div>
+    </div>
+
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
