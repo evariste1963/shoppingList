@@ -8,9 +8,10 @@ body {
   font-size: 50px;
 }
 
-form input, button{
+form input,
+button {
   font-size: 2rem;
-  height:5rem;
+  height: 5rem;
 }
 .done {
   text-decoration: line-through;

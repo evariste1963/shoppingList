@@ -15,7 +15,7 @@ function createListElement() {
 
   const delBtn = document.createElement("button");
   const xBtn = document.createElement("i");
-  xBtn.classList.add("fas", "fa-times");
+  xBtn.classList.add("fa", "fa-times");
   delBtn.appendChild(xBtn);
   li.append(delBtn);
 }
