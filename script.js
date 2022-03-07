@@ -8,10 +8,10 @@ function inputLength() {
 }
 
 function createListElement() {
-  const li = document.createElement("li");
-  li.appendChild(document.createTextNode(input.value));
-  li.addEventListener("click", toggleDone);
-  ul.appendChild(li);
+  const listItem = document.createElement("li");
+  listItem.appendChild(document.createTextNode(input.value));
+  listItem.addEventListener("click", toggleDone);
+  ul.appendChild(listItem);
   input.value = "";
 
   const delBtn = document.createElement("button");
@@ -19,10 +19,10 @@ function createListElement() {
   delBtn.classList.add("cust_delete");
   xBtn.classList.add("fa", "fa-times");
   delBtn.appendChild(xBtn);
-  li.append(delBtn);
+  listItem.append(delBtn);
 
   function toggleDone() {
-    li.classList.toggle("done");
+    listItem.classList.toggle("done");
   }
 }
 
