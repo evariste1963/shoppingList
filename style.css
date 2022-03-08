@@ -33,15 +33,12 @@ body {
 }
 
 .shopping i {
+  margin-left: 0;
   font-size: 3rem;
   color: orangered;
 }
-/*
-#userInput:focus {
-  color: blue;
-}
-*/
-.shopping:hover .fa-solid {
+
+#userInput:focus ~ #quill {
   animation: spin 1s infinite linear;
 }
 
