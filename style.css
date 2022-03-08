@@ -37,6 +37,10 @@ body {
   color: orangered;
 }
 
+.fa-solid:hover {
+  animation: spin 1s infinite linear;
+}
+
 .shopping input {
   padding-left: 1rem;
   font-family: inherit;
@@ -56,4 +60,21 @@ body {
 
 .done {
   text-decoration: line-through;
+}
+
+footer {
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 60px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0);
+  }
+  to {
+    transform: rotateY(-360deg);
+  }
 }
