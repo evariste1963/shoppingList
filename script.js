@@ -2,10 +2,16 @@ const container = document.getElementsByClassName(".container");
 const shopping = document.getElementsByClassName(".shopping");
 const input = document.getElementById("userInput");
 const ul = document.querySelector("ul");
+const field = document.getElementById("field");
+const quill = document.getElementById("quill");
 
 function inputLength() {
   return input.value.length;
 }
+console.log(quill);
+input.addEventListener("focus", function (event) {
+  event.target.classList.add("spin");
+});
 
 function createListElement() {
   const list = document.createElement("li");
@@ -32,7 +38,7 @@ userInput.addEventListener("keydown", function (e) {
   }
 });
 
-li.addEventListener("click", function () {});
+//li.addEventListener("click", function () {});
 
 //function createListItem(){
 // Create li element, style it and append it to ul

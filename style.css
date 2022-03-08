@@ -36,8 +36,12 @@ body {
   font-size: 3rem;
   color: orangered;
 }
-
-.fa-solid:hover {
+/*
+#userInput:focus {
+  color: blue;
+}
+*/
+#field:hover .fa-solid {
   animation: spin 1s infinite linear;
 }
 
