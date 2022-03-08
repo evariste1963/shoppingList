@@ -4,33 +4,50 @@ const input = document.getElementById("userInput");
 const ul = document.querySelector("ul");
 const field = document.getElementById("field");
 const quill = document.getElementById("quill");
+const delBtn = document.getElementById("delBtn");
+const allLi = document.getElementsByTagName("li");
 
 function inputLength() {
   return input.value.length;
 }
-console.log(quill);
-input.addEventListener("focus", function (event) {
-  event.target.classList.add("spin");
+
+//animate quill on userInput focus
+input.addEventListener("focus", function () {
+  quill.classList.add("spin");
 });
 
 function createListElement() {
-  const list = document.createElement("li");
-  list.appendChild(document.createTextNode(input.value));
-  list.addEventListener("click", toggleDone);
-  ul.appendChild(list);
-  input.value = "";
+  if (userInput.value.length > 0) {
+    //create li element & append List ul
+    const list = document.createElement("li");
+    list.appendChild(document.createTextNode(input.value));
+    list.addEventListener("click", toggleDone);
+    ul.appendChild(list);
+    //empty input field & remove focus
+    input.value = "";
+    input.blur();
+    //remove quill spin animation
+    quill.classList.remove("spin");
 
-  // const delBtn = document.createElement("button");
-  //const xBtn = document.createElement("i");
-  //delBtn.classList.add("cust_delete");
-  //xBtn.classList.add("fa", "fa-times");
-  // delBtn.appendChild(xBtn);
-  // list.append(delBtn);
-
-  function toggleDone() {
-    list.classList.toggle("done");
+    function toggleDone() {
+      list.classList.toggle("done");
+    }
   }
 }
+
+//THIS DOES NOT WORK BECAUSE I IS INCREMENTING PAST ALLLI.LENGTH -- use forEach somehow
+const delDone = function () {
+  for (let i = 0; i <= allLi.length; i++) {
+    if (allLi[i].classList.contains("done")) {
+      allLi[i].remove();
+      console.log(allLi.length);
+    }
+  }
+};
+
+delBtn.addEventListener("click", function () {
+  delDone();
+});
 
 userInput.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
