@@ -4,8 +4,9 @@
 }
 
 body {
-  background: orangered;
+  background: linear-gradient(rgb(255, 69, 0), rgb(0, 0, 0));
   font-family: Ink free, cursive, sans-serif;
+  height: 100vh;
 }
 
 .container {
