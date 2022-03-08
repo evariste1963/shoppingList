@@ -1,6 +1,6 @@
 const container = document.getElementsByClassName(".container");
 const shopping = document.getElementsByClassName(".shopping");
-const input = document.getElementById("userinput");
+const input = document.getElementById("userInput");
 const ul = document.querySelector("ul");
 
 function inputLength() {
