@@ -1,34 +1,33 @@
-var form = document.querySelector("form");
-var input = document.getElementById("userinput");
-var ul = document.querySelector("ul");
-const li = document.getElementsByTagName("li");
+const container = document.getElementsByClassName(".container");
+const shopping = document.getElementsByClassName(".shopping");
+const input = document.getElementById("userinput");
+const ul = document.querySelector("ul");
 
 function inputLength() {
   return input.value.length;
 }
 
 function createListElement() {
-  const listItem = document.createElement("li");
-  listItem.appendChild(document.createTextNode(input.value));
-  listItem.addEventListener("click", toggleDone);
-  ul.appendChild(listItem);
+  const list = document.createElement("li");
+  list.appendChild(document.createTextNode(input.value));
+  list.addEventListener("click", toggleDone);
+  ul.appendChild(list);
   input.value = "";
 
-  const delBtn = document.createElement("button");
-  const xBtn = document.createElement("i");
-  delBtn.classList.add("cust_delete");
-  xBtn.classList.add("fa", "fa-times");
-  delBtn.appendChild(xBtn);
-  listItem.append(delBtn);
+  // const delBtn = document.createElement("button");
+  //const xBtn = document.createElement("i");
+  //delBtn.classList.add("cust_delete");
+  //xBtn.classList.add("fa", "fa-times");
+  // delBtn.appendChild(xBtn);
+  // list.append(delBtn);
 
   function toggleDone() {
-    listItem.classList.toggle("done");
+    list.classList.toggle("done");
   }
 }
 
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  if (inputLength() > 0) {
+userInput.addEventListener("keydown", function (e) {
+  if (e.key == "Enter") {
     createListElement();
   }
 });
