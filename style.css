@@ -41,7 +41,7 @@ body {
   color: blue;
 }
 */
-#field:hover .fa-solid {
+.shopping:hover .fa-solid {
   animation: spin 1s infinite linear;
 }
 
