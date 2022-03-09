@@ -39,13 +39,16 @@ body {
   color: orangered;
 }
 
+#quill {
+  transform: rotateY(180deg);
+}
+
 #field {
   text-align: center;
 }
 
 .spin {
-  animation: spin 1s linear;
-  animation-iteration-count: 3;
+  animation: spin 0.5s linear infinite;
 }
 
 .shopping input {
@@ -71,10 +74,12 @@ body {
 
 #items {
   list-style: none;
+  color: black;
 }
 
 .done {
   text-decoration: line-through;
+  text-decoration-color: orangered;
 }
 
 footer {
@@ -86,9 +91,9 @@ footer {
 
 @keyframes spin {
   from {
-    transform: rotateY(0);
+    transform: rotateY(0deg);
   }
   to {
-    transform: rotateY(-360deg);
+    transform: rotateY(360deg);
   }
 }
