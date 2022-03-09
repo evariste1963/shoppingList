@@ -3,12 +3,7 @@ const ul = document.querySelector("ul");
 const quill = document.getElementById("quill");
 const delBtn = document.getElementById("delBtn");
 
-/*function inputLength() {
-  return input.value.length;
-}*/
-
-//animate quill on userInput focus
-input.addEventListener("focus", function () {
+input.addEventListener("keydown", function () {
   quill.classList.add("spin");
 });
 
@@ -19,9 +14,10 @@ function createListElement() {
     list.appendChild(document.createTextNode(`- ${input.value}`));
     list.addEventListener("click", toggleDone);
     ul.appendChild(list);
+
     //empty input field & remove focus
     input.value = "";
-    input.blur();
+
     //remove quill spin animation
     quill.classList.remove("spin");
 
