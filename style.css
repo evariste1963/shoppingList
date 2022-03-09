@@ -30,12 +30,17 @@ body {
   opacity: 0.9;
   margin-top: 1em;
   padding-bottom: 10px;
+  text-align: center;
 }
 
 .shopping i {
   margin-left: 0;
   font-size: 3rem;
   color: orangered;
+}
+
+#field {
+  text-align: center;
 }
 
 .spin {
@@ -57,15 +62,15 @@ body {
   border: none;
 }
 
-#stuff {
-  list-style: none;
-}
-
 #list {
   margin-left: 6rem;
   margin-right: auto;
   margin-top: 15px;
   font-size: 2rem;
+}
+
+#items {
+  list-style: none;
 }
 
 .done {
