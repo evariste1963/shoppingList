@@ -20,7 +20,7 @@ function createListElement() {
   if (userInput.value.length > 0) {
     //create li element & append List ul
     const list = document.createElement("li");
-    list.appendChild(document.createTextNode(input.value));
+    list.appendChild(document.createTextNode(`- ${input.value}`));
     list.addEventListener("click", toggleDone);
     ul.appendChild(list);
     //empty input field & remove focus
