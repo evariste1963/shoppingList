@@ -91,12 +91,12 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .shopping {
-    min-height: 600px;
+    min-height: 80vh;
   }
 
   .shopping h1 {
     font-size: 4rem;
-    margin-top: 0.8em;
+    margin-top: 3rem;
     padding-bottom: 2rem;
   }
   .shopping i {
