@@ -91,6 +91,7 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .shopping {
+    width: 90%;
     min-height: 80vh;
   }
 
