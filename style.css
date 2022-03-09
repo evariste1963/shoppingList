@@ -91,7 +91,7 @@ footer {
 
 @media only screen and (max-width: 667px) {
   .shopping {
-    min-height: 10vh;
+    min-height: 50vh;
   }
 
   .shopping h1 {
