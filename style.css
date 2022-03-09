@@ -49,6 +49,7 @@ body {
 
 #inputField {
   text-align: center;
+  width: 100%;
 }
 
 .shopping input {
@@ -96,15 +97,13 @@ footer {
   }
 
   .shopping h1 {
+    font-size: 24px;
     padding-bottom: 2rem;
   }
   .shopping i {
     margin-left: 10px;
   }
 
-  .shopping input {
-    width: 60%;
-  }
   #list {
     margin-left: 3rem;
     margin-right: auto;
