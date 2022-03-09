@@ -96,16 +96,13 @@ footer {
   }
 
   .shopping h1 {
-    font-size: 2rem;
     padding-bottom: 2rem;
   }
   .shopping i {
     margin-left: 10px;
-    font-size: 2rem;
   }
 
   .shopping input {
-    font-size: 2rem;
     width: 60%;
   }
   #list {
