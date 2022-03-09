@@ -89,26 +89,28 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 667px) {
+@media only screen and (max-width: 768px) {
   .shopping {
-    min-height: 50vh;
+    min-height: 600px;
   }
 
   .shopping h1 {
-    font-size: 2rem;
+    font-size: 4rem;
+    margin-top: 0.8em;
+    padding-bottom: 2rem;
   }
   .shopping i {
     margin-left: 10px;
-    font-size: 2rem;
+    font-size: 3rem;
   }
   #list {
     margin-left: 3rem;
     margin-right: auto;
     margin-top: 10px;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   footer {
-    font-size: 0.8rem;
+    font-size: 1.4rem;
     margin: 30px auto 60px auto;
     text-align: center;
   }
