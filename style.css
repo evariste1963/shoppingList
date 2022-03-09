@@ -89,7 +89,7 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 667px) {
   .shopping h1 {
     font-size: 2rem;
   }
