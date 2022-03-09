@@ -103,6 +103,10 @@ footer {
     margin-left: 10px;
     font-size: 2rem;
   }
+
+  .shopping input {
+    font-size: 2rem;
+  }
   #list {
     margin-left: 3rem;
     margin-right: auto;
@@ -110,7 +114,7 @@ footer {
     font-size: 2rem;
   }
   footer {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: 30px auto 60px auto;
     text-align: center;
   }
