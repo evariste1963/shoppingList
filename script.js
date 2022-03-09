@@ -2,6 +2,15 @@ const input = document.getElementById("userInput");
 const ul = document.querySelector("ul");
 const quill = document.getElementById("quill");
 const delBtn = document.getElementById("delBtn");
+let state = [];
+
+//STATE and ITEMS needs to be linked somehow --- rendered!
+
+window.onload = function () {
+  const storage = localStorage.getItem("items");
+  console.log(storage);
+  if (storage) state = JSON.parse(storage);
+};
 
 function createListElement() {
   if (userInput.value.length > 0) {
@@ -10,6 +19,7 @@ function createListElement() {
     list.appendChild(document.createTextNode(`- ${input.value}`));
     list.addEventListener("click", toggleDone);
     ul.appendChild(list);
+    state.push(`- ${input.value}`);
 
     //empty inputField & remove focus
     input.value = "";
@@ -21,6 +31,7 @@ function createListElement() {
     function toggleDone() {
       list.classList.toggle("done");
     }
+    localStorage.setItem("items", JSON.stringify(state));
   }
 }
 
@@ -37,7 +48,7 @@ input.addEventListener("keydown", function () {
   quill.classList.add("spin");
 });
 
-//add input filed to list on enter
+//add input field to list on enter
 userInput.addEventListener("keydown", function (e) {
   if (e.key == "Enter") {
     createListElement();
