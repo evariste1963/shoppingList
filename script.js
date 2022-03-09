@@ -8,7 +8,6 @@ let state = [];
 
 window.onload = function () {
   const storage = localStorage.getItem("items");
-  console.log(storage);
   if (storage) state = JSON.parse(storage);
 };
 
