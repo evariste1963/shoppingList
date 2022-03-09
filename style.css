@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -92,12 +93,13 @@ footer {
 
 @media only screen and (max-width: 768px) {
   .shopping {
-    width: 90%;
+    width: 800px;
     min-height: 80vh;
+    margin: 0px !important;
   }
 
   .shopping h1 {
-    font-size: 24px;
+    font-size: 28px;
     padding-bottom: 2rem;
   }
   .shopping i {
