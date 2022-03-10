@@ -8,13 +8,12 @@ let state = [];
 window.onload = function () {
   const storage = localStorage.getItem("items");
   if (storage) state = JSON.parse(storage);
-  renderState(state);
+  //renderState(state);
   console.log("localstorage state: ", state);
 };
-
+/*
 //render local storage items
 const renderState = function (state) {
-  /*
   state.forEach(el => {
     console.log(el);
     thing = document.createElement("li");
@@ -24,9 +23,8 @@ const renderState = function (state) {
     });
     ul.appendChild(thing);
   });
-  */
 };
-
+*/
 const createListElement = function () {
   if (userInput.value.length > 0) {
     //create li element & append List ul
