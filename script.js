@@ -14,10 +14,10 @@ window.onload = function () {
 function createListElement() {
   if (userInput.value.length > 0) {
     //create li element & append List ul
-    const list = document.createElement("li");
-    list.appendChild(document.createTextNode(`- ${input.value}`));
-    list.addEventListener("click", toggleDone);
-    ul.appendChild(list);
+    const item = document.createElement("li");
+    item.appendChild(document.createTextNode(`- ${input.value}`));
+    item.addEventListener("click", toggleDone);
+    ul.appendChild(item);
     state.push(`- ${input.value}`);
 
     //empty inputField & remove focus
@@ -28,7 +28,7 @@ function createListElement() {
 
     //toggle text strikethrough on item focus -- this should be refactored if possible
     function toggleDone() {
-      list.classList.toggle("done");
+      item.classList.toggle("done");
     }
     localStorage.setItem("items", JSON.stringify(state));
   }
