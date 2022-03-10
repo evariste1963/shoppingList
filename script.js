@@ -22,7 +22,7 @@ const renderState = function (state) {
     item.addEventListener("click", function () {
       item.classList.toggle("done");
     });
-    console.log(item);
+   
     ul.appendChild(item);
   });
 };
