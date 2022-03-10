@@ -34,9 +34,11 @@ function createListElement() {
   }
 }
 
-//delete all done items
-const delDone = function () {
+//delete all done items & clear text input inc quill animation
+const ClearAndDelete = function () {
   const items = document.getElementsByClassName("done");
+  input.value = "";
+  quill.classList.remove("spin");
   while (items.length > 0) {
     items[0].parentNode.removeChild(items[0]);
   }
@@ -56,5 +58,5 @@ userInput.addEventListener("keydown", function (e) {
 
 //call delete marked items from list
 delBtn.addEventListener("click", function () {
-  delDone();
+  ClearAndDelete();
 });
