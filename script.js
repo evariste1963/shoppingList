@@ -4,35 +4,38 @@ const quill = document.getElementById("quill");
 const delBtn = document.getElementById("delBtn");
 const li = document.querySelector("li");
 let state = [];
+let doned = [];
 
 //get local storage items
 window.onload = function () {
   const storage = localStorage.getItem("items");
   if (storage) state = JSON.parse(storage);
-  console.log("localstorage state: ", state);
-  //renderState(state);
+  renderState(state);
 };
-/*
+
+//event delegation
+ul.addEventListener("click", function (e) {
+  if (e.target.classList.contains("item")) {
+    e.target.classList.toggle("done");
+  }
+});
+
 //render local storage items
 const renderState = function (state) {
-  state.forEach(el => {
-    //console.log(el);
+  state.forEach((el) => {
     item = document.createElement("li");
+    item.classList.add("item");
     item.appendChild(document.createTextNode(`${el}`));
-    item.addEventListener("click", function () {
-      item.classList.toggle("done");
-    });
-   
     ul.appendChild(item);
   });
 };
-*/
+
 const createListElement = function () {
   if (userInput.value.length > 0) {
     //create li element & append List ul
     const item = document.createElement("li");
+    item.classList.add("item");
     item.appendChild(document.createTextNode(`- ${input.value}`));
-    item.addEventListener("click", toggleDone);
     ul.appendChild(item);
     state.push(`- ${input.value}`);
 
@@ -42,10 +45,6 @@ const createListElement = function () {
     //remove quill spin animation
     quill.classList.remove("spin");
 
-    //toggle text strikethrough on item focus -- this should be refactored if possible
-    function toggleDone() {
-      item.classList.toggle("done");
-    }
     localStorage.setItem("items", JSON.stringify(state));
   }
 };
@@ -55,8 +54,20 @@ const ClearAndDelete = function () {
   const items = document.getElementsByClassName("done");
   input.value = "";
   quill.classList.remove("spin");
+
+  //find items to delete
   while (items.length > 0) {
+    const targetItem = items[0].innerHTML;
     items[0].parentNode.removeChild(items[0]);
+    const localStorageState = JSON.parse(localStorage.getItem("items"));
+    const itemIndex = localStorageState.indexOf(targetItem);
+
+    //delete done items from local storage
+    localStorageState.splice(itemIndex, 1);
+    state.splice(itemIndex, 1);
+
+    // refesh state to local storage
+    localStorage.setItem("items", JSON.stringify(state));
   }
 };
 
@@ -74,3 +85,4 @@ userInput.addEventListener("keydown", function (e) {
 
 //call delete marked items from list
 delBtn.addEventListener("click", ClearAndDelete);
+
