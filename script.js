@@ -2,29 +2,31 @@ const input = document.getElementById("userInput");
 const ul = document.querySelector("ul");
 const quill = document.getElementById("quill");
 const delBtn = document.getElementById("delBtn");
+const li = document.querySelector("li");
 let state = [];
 
 //get local storage items
 window.onload = function () {
   const storage = localStorage.getItem("items");
   if (storage) state = JSON.parse(storage);
-  //renderState(state);
   console.log("localstorage state: ", state);
+  renderState(state);
 };
-/*
+
 //render local storage items
 const renderState = function (state) {
   state.forEach(el => {
-    console.log(el);
-    thing = document.createElement("li");
-    thing.appendChild(document.createTextNode(el));
-    thing.addEventListener("click", function () {
-      thing.classList.toggle("done");
+    //console.log(el);
+    item = document.createElement("li");
+    item.appendChild(document.createTextNode(`${el}`));
+    item.addEventListener("click", function () {
+      item.classList.toggle("done");
     });
-    ul.appendChild(thing);
+    console.log(item);
+    ul.appendChild(item);
   });
 };
-*/
+
 const createListElement = function () {
   if (userInput.value.length > 0) {
     //create li element & append List ul
