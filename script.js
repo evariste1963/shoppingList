@@ -57,6 +57,4 @@ userInput.addEventListener("keydown", function (e) {
 });
 
 //call delete marked items from list
-delBtn.addEventListener("click", function () {
-  ClearAndDelete();
-});
+delBtn.addEventListener("click", ClearAndDelete);
