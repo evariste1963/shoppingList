@@ -4,15 +4,22 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   background: linear-gradient(rgb(255, 69, 0), rgb(0, 0, 0));
   font-family: Ink free, cursive, sans-serif;
   height: 100vh;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .container {
   width: 90%;
-  margin: auto;
+  margin: auto auto 0 auto;
   margin-top: 4rem;
   display: flex;
 }
@@ -104,7 +111,7 @@ footer {
     padding-bottom: 2rem;
   }
   .shopping i {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-left: 10px;
   }
 
@@ -112,7 +119,7 @@ footer {
     margin-left: 3rem;
     margin-right: auto;
     margin-top: 10px;
-    font-size: 3rem;
+    font-size: 1.8rem;
   }
   footer {
     font-size: 0.8rem;
