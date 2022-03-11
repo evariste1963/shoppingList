@@ -32,6 +32,7 @@ body {
   background: rgb(252, 252, 251);
   border-radius: 20px;
   box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.5);
+  padding-bottom: 1.5rem;
 }
 
 .shopping h1 {
