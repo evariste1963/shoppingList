@@ -9,21 +9,21 @@ let state = [];
 
 ////----- FUNCTIONS ---\\\\
 //get local storage items
-window.onload = function () {
+window.onload = () => {
   const storage = localStorage.getItem("items");
   if (storage) state = JSON.parse(storage);
   renderState(state);
 };
 
 //render local storage items
-const renderState = function (state) {
+const renderState = state => {
   state.forEach(el => {
     createElement(`${el}`);
   });
 };
 
 //create new items from user input and set to local storage
-const createListElement = function () {
+const createListElement = () => {
   if (userInput.value.length > 0) {
     //call createElement
     createElement(`- ${input.value}`);
@@ -43,7 +43,7 @@ const createListElement = function () {
 };
 
 //create li element & append List ul
-const createElement = function (textItem) {
+const createElement = textItem => {
   const item = document.createElement("li");
   item.classList.add("item");
   item.appendChild(document.createTextNode(textItem));
@@ -51,7 +51,7 @@ const createElement = function (textItem) {
 };
 
 //delete all done items & clear text input inc quill animation
-const ClearAndDelete = function () {
+const ClearAndDelete = () => {
   const items = document.getElementsByClassName("done");
   input.value = "";
   quill.classList.remove("spin");
