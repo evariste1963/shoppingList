@@ -1,3 +1,5 @@
+"use strict";
+
 const input = document.getElementById("userInput");
 const ul = document.querySelector("ul");
 const quill = document.getElementById("quill");
@@ -42,7 +44,7 @@ const createListElement = function () {
 
 //create li element & append List ul
 const createElement = function (textItem) {
-  item = document.createElement("li");
+  const item = document.createElement("li");
   item.classList.add("item");
   item.appendChild(document.createTextNode(textItem));
   ul.appendChild(item);
