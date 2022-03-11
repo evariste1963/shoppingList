@@ -4,8 +4,8 @@ const quill = document.getElementById("quill");
 const delBtn = document.getElementById("delBtn");
 const li = document.querySelector("li");
 let state = [];
-let doned = [];
 
+////----- FUNCTIONS ---\\\\
 //get local storage items
 window.onload = function () {
   const storage = localStorage.getItem("items");
@@ -13,30 +13,20 @@ window.onload = function () {
   renderState(state);
 };
 
-//event delegation
-ul.addEventListener("click", function (e) {
-  if (e.target.classList.contains("item")) {
-    e.target.classList.toggle("done");
-  }
-});
-
 //render local storage items
 const renderState = function (state) {
-  state.forEach((el) => {
-    item = document.createElement("li");
-    item.classList.add("item");
-    item.appendChild(document.createTextNode(`${el}`));
-    ul.appendChild(item);
+  state.forEach(el => {
+    createElement(`${el}`);
   });
 };
 
+//create new items from user input and set to local storage
 const createListElement = function () {
   if (userInput.value.length > 0) {
-    //create li element & append List ul
-    const item = document.createElement("li");
-    item.classList.add("item");
-    item.appendChild(document.createTextNode(`- ${input.value}`));
-    ul.appendChild(item);
+    //call createElement
+    createElement(`- ${input.value}`);
+
+    //push new item to state
     state.push(`- ${input.value}`);
 
     //empty inputField & remove focus
@@ -45,8 +35,17 @@ const createListElement = function () {
     //remove quill spin animation
     quill.classList.remove("spin");
 
+    //set local storage with new item
     localStorage.setItem("items", JSON.stringify(state));
   }
+};
+
+//create li element & append List ul
+const createElement = function (element) {
+  item = document.createElement("li");
+  item.classList.add("item");
+  item.appendChild(document.createTextNode(element));
+  ul.appendChild(item);
 };
 
 //delete all done items & clear text input inc quill animation
@@ -62,7 +61,7 @@ const ClearAndDelete = function () {
     const localStorageState = JSON.parse(localStorage.getItem("items"));
     const itemIndex = localStorageState.indexOf(targetItem);
 
-    //delete done items from local storage
+    //delete done items from local storage & state
     localStorageState.splice(itemIndex, 1);
     state.splice(itemIndex, 1);
 
@@ -70,6 +69,15 @@ const ClearAndDelete = function () {
     localStorage.setItem("items", JSON.stringify(state));
   }
 };
+
+///---- eventListeners ---\\\\
+
+//event delegation --toggle done on selected item
+ul.addEventListener("click", function (e) {
+  if (e.target.classList.contains("item")) {
+    e.target.classList.toggle("done");
+  }
+});
 
 //animate quill while typing
 input.addEventListener("keydown", function () {
@@ -85,4 +93,3 @@ userInput.addEventListener("keydown", function (e) {
 
 //call delete marked items from list
 delBtn.addEventListener("click", ClearAndDelete);
-
