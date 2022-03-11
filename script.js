@@ -41,10 +41,10 @@ const createListElement = function () {
 };
 
 //create li element & append List ul
-const createElement = function (element) {
+const createElement = function (textItem) {
   item = document.createElement("li");
   item.classList.add("item");
-  item.appendChild(document.createTextNode(element));
+  item.appendChild(document.createTextNode(textItem));
   ul.appendChild(item);
 };
 
