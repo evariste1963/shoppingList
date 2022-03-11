@@ -133,8 +133,9 @@ footer {
 
 @keyframes spin {
   from {
-    transform: rotateY(0deg);
+    transform: rotateY(0);
   }
+
   to {
     transform: rotateY(360deg);
   }
