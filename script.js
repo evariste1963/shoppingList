@@ -16,8 +16,8 @@ window.onload = () => {
 };
 
 //render local storage items
-const renderState = state => {
-  state.forEach(el => {
+const renderState = (state) => {
+  state.forEach((el) => {
     createElement(`${el}`);
   });
 };
@@ -43,7 +43,7 @@ const createListElement = () => {
 };
 
 //create li element & append List ul
-const createElement = textItem => {
+const createElement = (textItem) => {
   const item = document.createElement("li");
   item.classList.add("item");
   item.appendChild(document.createTextNode(textItem));
