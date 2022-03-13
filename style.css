@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
 }
 
 html {
@@ -120,7 +119,7 @@ footer {
     margin-left: 10px;
   }
 
-  .shopping input {
+  input[type="text"] {
     text-decoration: none !important;
   }
 
