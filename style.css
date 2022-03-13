@@ -119,7 +119,7 @@ footer {
     margin-left: 10px;
   }
 
-  input[type="text"] {
+  input[type="text"]:focus {
     text-decoration: none !important;
   }
 
