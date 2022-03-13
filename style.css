@@ -119,6 +119,10 @@ footer {
     margin-left: 10px;
   }
 
+  .shopping input {
+    text-decoration: none !important;
+  }
+
   #list {
     margin-left: 3rem;
     margin-right: auto;
