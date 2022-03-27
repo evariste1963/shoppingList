@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inspiration&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +13,8 @@ html {
 body {
   /*set background gradient to maintain full veiw window*/
   background: linear-gradient(rgb(255, 69, 0), rgb(0, 0, 0));
-  font-family: Ink free, cursive, "Brush Script", "Comic Sans MS", "Comic Sans",
-    sans-serif;
+  font-family: Ink free, cursive, "Inspiration", "Brush Script", "Comic Sans MS",
+    "Comic Sans", sans-serif;
   height: 100vh;
   margin: 0;
   background-repeat: no-repeat;
