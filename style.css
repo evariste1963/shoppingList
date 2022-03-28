@@ -13,7 +13,7 @@ html {
 body {
   /*set background gradient to maintain full veiw window*/
   background: linear-gradient(rgb(255, 69, 0), rgb(0, 0, 0));
-  font-family: Ink free, cursive, "Kristi", "Brush Script", "Comic Sans MS",
+  font-family: Ink free, cursive, "Quicksand", "Brush Script", "Comic Sans MS",
     "Comic Sans", sans-serif;
   height: 100vh;
   margin: 0;
